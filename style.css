@@ -1,0 +1,57 @@
+.modal-content{
+position: fixed;
+z-index: 1;
+left: 35%;
+top: 35%;
+width: 100%;
+height: 100%;
+overflow: auto;
+display: none;
+}
+
+.popup{
+    width: 350px;
+    height: 250px;
+    background: #fff;
+    border-radius: 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    gap: 8px;
+}
+
+.popup h2{
+    font-size: x-large;
+    font-weight: bold;
+}
+.popup p{
+    font-size: smaller;
+    font-weight: 400;
+}
+.popup h4{
+    font-size: large;
+    font-weight: 600;
+}
+.close-btn{
+    padding: 10px 10px;
+    background: #6fd649;
+    color: #111111;
+    border-radius: 10px;
+    cursor: pointer;
+    font-size: large;
+    font-weight: 500;
+}
+
+@media screen and (max-width: 576px){
+    .modal-content{
+        position: fixed;
+        z-index: 1;
+        left: 10%;
+        top: 15%;
+        width: 90%;
+        height: 190%;
+        overflow: auto;
+        display: none;
+        }
+}

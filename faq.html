@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>FAQ - Donate Bangladesh</title>
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <script src="https://kit.fontawesome.com/9c43b4ad5e.js" crossorigin="anonymous"></script>
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B4F461',
+                        secondary: '#1111110D',
+                        textColor: '#111111',
+                    },
+                    fontFamily: {
+                        lexend: "Lexend",
+                    },
+                },
+            },
+        }
+    </script>
+
+</head>
+
+<body class="font-lexend">
+    <nav class="flex flex-col gap-4 lg:flex-row justify-between items-center p-12 mx-auto bg-stone-100">
+        <a href="/">
+            <button class="text-lg font-semibold bg-primary py-3 px-5 rounded-lg text-textColor">Home</button>
+        </a>
+        <div class="flex justify-center items-center gap-4">
+            <img src="./assets/logo.png" alt="Donate Bangladesh Logo" class="w-10 h-10">
+            <p class="text-lg font-semibold text-textColor">Donate Bangladesh</p>
+        </div>
+        <div class="flex justify-center items-center gap-2">
+            <img src="./assets/coin.png" alt="Coin Icon">
+            <p class="text-lg font-semibold text-textColor">65000</p>
+            <p class="text-lg font-semibold text-textColor">BDT</p>
+        </div>
+    </nav>
+
+    <main class="mt-10">
+        <section class="w-11/12 mx-auto">
+            <h1 class="text-2xl lg:text-5xl font-semibold mb-12">
+                Important FAQ <i class="fa-regular fa-circle-question"></i>
+            </h1>
+            <div class="collapse collapse-arrow bg-base-100">
+                <input type="radio" name="my-accordion-2" checked="checked" />
+                <div class="collapse-title text-xl font-medium">What is the Document Object Model (DOM)?</div>
+                <div class="collapse-content">
+                    <p>The Document Object Model (DOM) is a programming API for HTML and XML documents. It defines the
+                        logical structure of documents and how a document is accessed and manipulated.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you select an element from the DOM?</div>
+                <div class="collapse-content">
+                    <p>The Selectors API provides methods that make it quick and easy to retrieve element nodes from the
+                        DOM by matching against a set of selectors.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">What is event delegation in the context of the DOM, and
+                    why is it useful?</div>
+                <div class="collapse-content">
+                    <p>Event delegation refers to the process of using event propagation (bubbling) to handle events at
+                        a higher level in the DOM than the element on which the event originated.</p>
+                </div>
+            </div>
+            <div class="collapse collapse-arrow bg-base-100">
+                <input type="radio" name="my-accordion-2" />
+                <div class="collapse-title text-xl font-medium">How do you manipulate an element's attributes and styles
+                    using the DOM?</div>
+                <div class="collapse-content">
+                    <p>The <code>classList</code> object provides methods to change the class of an element. If you want
+                        to change other attributes like <code>id</code>, <code>href</code>, or <code>src</code>, you can
+                        use the <code>setAttribute()</code> method.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+</body>
+
+</html>

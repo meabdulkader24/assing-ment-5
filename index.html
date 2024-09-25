@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Donate Bangladesh</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Lexend:wght@100..900&display=swap" rel="stylesheet">
+
+    <!-- DaisyUI -->
+    <link href="https://cdn.jsdelivr.net/npm/daisyui@4.12.10/dist/full.min.css" rel="stylesheet" type="text/css" />
+    <script src="https://cdn.tailwindcss.com"></script>
+
+    <link rel="stylesheet" href="./style.css">
+
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        primary: '#B4F461',
+                        secondary: '#1111110D',
+                        textColor: '#111111',
+                    },
+                    fontFamily: {
+                        lexend: "Lexend",
+                    },
+                },
+            },
+        }
+    </script>
+</head>
+
+<body class="max-w-[1440px] font-lexend">
+    <header class="sticky top-0 backdrop-filter backdrop-blur-sm bg-opacity-75 bg-violet-50">
+        <nav class="flex flex-col gap-4 lg:flex-row justify-between items-center pt-4 pb-6 px-20 mx-auto">
+            <a href="./faq.html">
+                <button class="text-lg font-semibold bg-primary py-3 px-5 rounded-lg text-textColor">Blog</button>
+            </a>
+            <div class="flex justify-center items-center gap-4">
+                <img src="./assets/logo.png" alt="Donate Bangladesh Logo" class="w-10 h-10">
+                <p class="text-lg font-semibold text-textColor">Donate Bangladesh</p>
+            </div>
+            <div class="flex justify-center items-center gap-2">
+                <img src="./assets/coin.png" alt="Coin Icon">
+                <p id="main-balance" class="text-lg font-semibold text-textColor">0</p>
+                <p class="text-lg font-semibold text-textColor">BDT</p>
+            </div>
+        </nav>
+        <div class="flex justify-center items-center gap-5 pb-3">
+            <button id="donate-btn" class="text-lg font-semibold text-textColor bg-primary lg:w-1/12 p-4 rounded-lg">
+                Donate
+            </button>
+            <button id="history-btn" class="text-lg font-semibold text-textColor bg-secondary lg:w-1/12 p-4 rounded-lg">
+                History
+            </button>
+        </div>
+    </header>
+
+    <main>
+        <!-- Donation Section -->
+        <section id="donate">
+            <!-- Noakhali Donation Card -->
+            <div class="mx-auto border-2 rounded-lg w-10/12 mt-14">
+                <div class="flex flex-col lg:flex-row justify-center items-center p-4 gap-6">
+                    <img src="./assets/noakhali.png" alt="Noakhali Flood Image">
+                    <div class="flex flex-col justify-center items-start space-y-3">
+                        <div class="flex items-center gap-2 bg-secondary p-2 rounded-lg">
+                            <img src="./assets/coin.png" alt="Coin Icon">
+                            <p id="amount-noakhali" class="text-sm font-normal text-textColor">5500</p>
+                            <p class="text-sm font-normal text-textColor">BDT</p>
+                        </div>
+                        <h3 class="text-xl font-bold text-textColor">Donate for Flood at Noakhali, Bangladesh</h3>
+                        <p class="text-lg font-light">
+                            Bangladesh is currently facing a devastating flood crisis, and the district of Noakhali has been hit particularly hard. Thousands of people have lost their homes, livelihoods, and all sense of security.
+                        </p>
+                        <input id="input-noakhali" class="w-full border-2 p-3 rounded-lg" type="text" placeholder="Write Donation Amount">
+                        <button id="donate-btn-noakhali" class="bg-primary w-full p-3 rounded-lg text-lg font-semibold text-textColor">
+                            Donate Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Feni Donation Card -->
+            <div class="mx-auto border-2 rounded-lg w-10/12 mt-14">
+                <div class="flex flex-col lg:flex-row justify-center items-center p-4 gap-6">
+                    <img src="./assets/feni.png" alt="Feni Flood Image">
+                    <div class="flex flex-col justify-center items-start space-y-3">
+                        <div class="flex items-center gap-2 bg-secondary p-2 rounded-lg">
+                            <img src="./assets/coin.png" alt="Coin Icon">
+                            <p id="amount-feni" class="text-sm font-normal text-textColor">2000</p>
+                            <p class="text-sm font-normal text-textColor">BDT</p>
+                        </div>
+                        <h3 class="text-xl font-bold text-textColor">Donate for Flood Relief in Feni, Bangladesh</h3>
+                        <p class="text-lg font-light">
+                            The recent floods in Feni have devastated local communities, leading to severe disruption and loss. Your generous donation will help provide immediate aid, including food, clean water, and medical supplies.
+                        </p>
+                        <input id="input-feni" class="w-full border-2 p-3 rounded-lg" type="text" placeholder="Write Donation Amount">
+                        <button id="donate-btn-feni" class="bg-primary w-full p-3 rounded-lg text-lg font-semibold text-textColor">
+                            Donate Now
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- More Donation Cards... -->
+        </section>
+
+        <!-- History Section -->
+        <section id="history" class="hidden space-y-4 mt-10 w-11/12 mx-auto"></section>
+
+        <!-- Modal for Donation Confirmation -->
+        <div id="modal" class="modal-content hidden">
+            <div class="popup">
+                <h2>Congrats</h2>
+                <img src="./assets/coin.png" alt="Coin Icon">
+                <p>You Have Donated For Humankind</p>
+                <h4>Successfully</h4>
+                <button id="btn" class="close-btn">Close Confirmation</button>
+            </div>
+        </div>
+    </main>
+    <!-- Tailwind CSS Popup Modal -->
+
+
+
+    <script src="./js/app.js"></script>
+    <script src="./js/button.js"></script>
+    <script src="./js/donation.js"></script>
+</body>
+
+</html>
